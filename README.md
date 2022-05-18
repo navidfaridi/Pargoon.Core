@@ -1,2 +1,2 @@
 # Pargoon.Core
-Pargoon Utility sources
+Pargoon Utility class libraries

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Utility", "Pargoon.Utility\Pargoon.Utility.csproj", "{7CED43A1-BC4D-48BC-9D16-B00B33081199}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.PersianNumber", "Pargoon.PersianNumber\Pargoon.PersianNumber.csproj", "{FE6F1CB4-F1D2-49D7-9F40-4AA496819D05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.PersianDateUtility", "Pargoon.PersianDateUtility\Pargoon.PersianDateUtility.csproj", "{9C77ED2E-F6E6-450C-A342-432F0C39A338}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.TagHelpers", "Pargoon.TagHelpers\Pargoon.TagHelpers.csproj", "{AA880CB9-8D5D-46DE-ADD3-67763648CDB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9EF69F80-BBF1-4EAB-BD1A-CE1258DC8ECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pargoon.Core.Tests", "..\tests\Pargoon.Core.Tests\Pargoon.Core.Tests.csproj", "{804CD82C-F3C2-407D-82CB-C6C236D36784}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CED43A1-BC4D-48BC-9D16-B00B33081199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CED43A1-BC4D-48BC-9D16-B00B33081199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CED43A1-BC4D-48BC-9D16-B00B33081199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CED43A1-BC4D-48BC-9D16-B00B33081199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE6F1CB4-F1D2-49D7-9F40-4AA496819D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE6F1CB4-F1D2-49D7-9F40-4AA496819D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE6F1CB4-F1D2-49D7-9F40-4AA496819D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE6F1CB4-F1D2-49D7-9F40-4AA496819D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C77ED2E-F6E6-450C-A342-432F0C39A338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C77ED2E-F6E6-450C-A342-432F0C39A338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C77ED2E-F6E6-450C-A342-432F0C39A338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C77ED2E-F6E6-450C-A342-432F0C39A338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA880CB9-8D5D-46DE-ADD3-67763648CDB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA880CB9-8D5D-46DE-ADD3-67763648CDB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA880CB9-8D5D-46DE-ADD3-67763648CDB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA880CB9-8D5D-46DE-ADD3-67763648CDB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804CD82C-F3C2-407D-82CB-C6C236D36784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804CD82C-F3C2-407D-82CB-C6C236D36784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804CD82C-F3C2-407D-82CB-C6C236D36784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804CD82C-F3C2-407D-82CB-C6C236D36784}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{804CD82C-F3C2-407D-82CB-C6C236D36784} = {9EF69F80-BBF1-4EAB-BD1A-CE1258DC8ECE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC1B900D-CD4E-4AC4-9D11-27C767563AD7}
+	EndGlobalSection
+EndGlobal
