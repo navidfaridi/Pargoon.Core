@@ -4,19 +4,19 @@ Pargoon Utility class libraries
 ## Pargoon.Utility
 This is a utility package, contain some useful functions for regular expression and working with strings.
 
-RegXPattern
+### RegXPattern
 ----
 This part contain some useful regular expression patterns.
 
-StringUtility
+### StringUtility
 ----
 Contain some extension methods for strings
 
-ArrayUtility
+### ArrayUtility
 ----
 Contain some useful extension methods for merging arrays to string
 
-RandomUtils
+### RandomUtils
 ----
 Contain some useful function for generating random number and string
 
