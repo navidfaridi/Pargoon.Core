@@ -154,8 +154,6 @@ namespace Pargoon.Utility
             return value.ToString("N0");
         }
 
-
-
         /// <summary>
         /// fa-IR => current culture currency symbol => ریال
         /// 123456 => "123,123ریال"
@@ -171,6 +169,25 @@ namespace Pargoon.Utility
         public static string ToCurrency(this decimal value)
         {
             return value.ToString("C0");
+        }
+        public static string ToEnglishNumber(this string txt)
+        {
+            if (!string.IsNullOrEmpty(txt))
+            {
+                // IR۷۷۰۵۶۰۰۸۲۴۷۷۷۰۲۹۳۶۸۲۶۰۰۱
+                txt = txt.Replace("۱", "1");
+                txt = txt.Replace("۲", "2");
+                txt = txt.Replace("۳", "3");
+                txt = txt.Replace("۴", "4");
+                txt = txt.Replace("۵", "5");
+                txt = txt.Replace("۶", "6");
+                txt = txt.Replace("۷", "7");
+                txt = txt.Replace("۸", "8");
+                txt = txt.Replace("۹", "9");
+                txt = txt.Replace("۰", "0");
+                return txt.Trim();
+            }
+            return string.Empty;
         }
 
         public static string En2Fa(this string str)
