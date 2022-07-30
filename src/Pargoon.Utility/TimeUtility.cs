@@ -1,4 +1,6 @@
-﻿namespace Pargoon.Utility
+﻿using System;
+
+namespace Pargoon.Utility
 {
     public static class TimeUtility
     {
@@ -52,6 +54,14 @@
             //var h = seconds % 24;
             //return h.ToString() + ":" + m.ToString() + ":" + s.ToString();
             return $"{h:00}:{m:00}:{s:00}";
+        }
+
+        public static DateTime GetDateTimeFromUnixMiliseconds(long ms)
+        {
+            var sdt = ms / 1000;
+            var udt = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            var xdt = DateTime.Now.AddSeconds(sdt - udt);
+            return xdt;
         }
     }
 }

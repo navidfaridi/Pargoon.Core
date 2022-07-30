@@ -1,15 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
-    <FileVersion>1.0.7</FileVersion>
-    <Version>1.0.7</Version>
+    <FileVersion>1.0.8</FileVersion>
+    <Version>1.0.8</Version>
     <Copyright>Navid Faridi</Copyright>
     <Description>This is a utility package, contain some useful functions for regular expression and working with strings.</Description>
-    <AssemblyVersion>1.0.7</AssemblyVersion>
+    <AssemblyVersion>1.0.8</AssemblyVersion>
     <PackageReleaseNotes>adding encryption utility</PackageReleaseNotes>
     <Authors>Navid Faridi</Authors>
     <SignAssembly>False</SignAssembly>
