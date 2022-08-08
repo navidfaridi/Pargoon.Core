@@ -45,7 +45,6 @@ namespace Pargoon.Utility
                 }
             }
         }
-
         public static void CopyPropertiesFrom<TU, T>(this TU dest, T source)
         {
             var sourceProps = typeof(T).GetProperties().Where(x => x.CanRead).ToList();
