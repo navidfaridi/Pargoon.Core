@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Pargoon.Utility
 {
@@ -21,10 +22,15 @@ namespace Pargoon.Utility
         /// <returns></returns>
         public static int GetHour(this string s)
         {
-            string[] sd = s.Split(':');
+            string[] sd = s.ToUpper().Trim().Split(':');
+            int hour = 0;
             if (sd.Length > 0)
-                return sd[0].ToInt();
-            else return 0;
+            {
+                hour = sd[0].ToInt();
+                if (s.Contains("PM"))
+                    hour += 12;
+            }
+            return hour;
         }
 
         /// <summary>
@@ -34,10 +40,20 @@ namespace Pargoon.Utility
         /// <returns></returns>
         public static int GetMinute(this string s)
         {
-            string[] sd = s.Split(':');
+            string[] sd = s
+                .ToLower()
+                .Replace("am",String.Empty)
+                .Replace("pm",String.Empty)
+                .Trim()
+                .Split(':');
+            int min = 0;
             if (sd.Length > 1)
-                return sd[1].ToInt();
-            else return 0;
+            {
+
+                min= sd[1].ToInt();
+                
+            }
+            return min;
         }
 
         /// <summary>
@@ -51,12 +67,10 @@ namespace Pargoon.Utility
             seconds = seconds / 60;
             var m = seconds % 60;
             var h = seconds / 60;
-            //var h = seconds % 24;
-            //return h.ToString() + ":" + m.ToString() + ":" + s.ToString();
             return $"{h:00}:{m:00}:{s:00}";
         }
 
-        public static DateTime GetDateTimeFromUnixMiliseconds(long ms)
+        public static DateTime GetDateTimeFromUnixMiliseconds(this long ms)
         {
             var sdt = ms / 1000;
             var udt = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
