@@ -1,5 +1,4 @@
 using Pargoon.Utility;
-using System;
 using Xunit;
 
 namespace Pargoon.Core.Tests
@@ -49,6 +48,18 @@ namespace Pargoon.Core.Tests
             Assert.Equal(dt.Minute, expectedMin);
             Assert.Equal(dt.Second, expectedSecond);
 
+        }
+
+        [Theory]
+        [InlineData("11:04", 1104)]
+        [InlineData("16:30", 1630)]
+        [InlineData("12:14", 1214)]
+        [InlineData("01:04", 104)]
+        public void ShouldReturnCorrespondingNumberForSpecificTimeString(string specificTime,int expectedNumber)
+        {
+            var result = specificTime.ToIntTime();
+
+            Assert.Equal(expectedNumber, result);
         }
     }
 }

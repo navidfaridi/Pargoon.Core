@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Linq;
 
 namespace Pargoon.Utility
 {
     public static class TimeUtility
     {
         /// <summary>
-        /// تبدیل یک رشته حاوی ساعت به یک عدد صحیح چهار رقمی
+        /// convert a time string to a 4 digit number, for example 11:04 -> 1104
         /// </summary>
         /// <param name="s">hh:mm</param>
         /// <returns></returns>
@@ -16,7 +15,10 @@ namespace Pargoon.Utility
         }
 
         /// <summary>
-        /// استخراج عدد ساعت از یک رشته حاوی ساعت و دقیقه
+        /// Extracting the hour number from a string containing hours and minutes
+        /// for example :
+        /// 13:15 -> 13
+        /// 03:45 -> 3
         /// </summary>
         /// <param name="s">hh:mm</param>
         /// <returns></returns>
@@ -34,7 +36,10 @@ namespace Pargoon.Utility
         }
 
         /// <summary>
-        /// استخراج عدد دقیقه از یک رشته حاوی ساعت و دقیقه
+        /// Extracting the minute number from a string containing hours and minutes
+        /// for example :
+        /// 13:15 -> 15
+        /// 05:34 -> 34
         /// </summary>
         /// <param name="s">hh:mm</param>
         /// <returns></returns>
@@ -57,7 +62,10 @@ namespace Pargoon.Utility
         }
 
         /// <summary>
-        /// نمایش زمان به صورت ساعت، دقیقه و ثانیه
+        /// Convert a number specifying a value in seconds to a string of hours, minutes and seconds
+        /// for example :
+        /// 61   -> 00:01:01
+        /// 3665 -> 01:01:05
         /// </summary>
         /// <param name="s">hh:mm:ss</param>
         /// <returns></returns>
@@ -70,6 +78,11 @@ namespace Pargoon.Utility
             return $"{h:00}:{m:00}:{s:00}";
         }
 
+        /// <summary>
+        /// convert a Unix MiliSecond number to DateTime
+        /// </summary>
+        /// <param name="ms"></param>
+        /// <returns></returns>
         public static DateTime GetDateTimeFromUnixMiliseconds(this long ms)
         {
             var sdt = ms / 1000;
