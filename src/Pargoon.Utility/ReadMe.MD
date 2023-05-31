@@ -73,6 +73,37 @@ string decryptedWithExpiration = PasswordHelper.DecryptWithExpiration(encryptedW
 Console.WriteLine(decryptedWithExpiration); // Output: Confidential data (within 1 hour of encryption)
 ```
 
+### StringUtility Examples
+Here are some examples of using the StringUtility class methods:
+
+```csharp
+bool containsEnglishLetters = "Hello123".IsEnglishLetter();
+
+bool isValidUsername = "john_doe123".IsValidUsername();
+
+bool isValidMobileNumber = "09123456789".IsValidMobileNumber();
+
+bool isNumeric = "12345".IsNumeric();
+
+bool isValidEmail = "test@example.com".IsValidEmail();
+// Output: true
+
+string fixedEmail = " test @example. com ".FixEmail();
+// Output: "test@example.com"
+
+string strippedString = "<p>Hello, <b>world!</b></p>".StripTags();
+// Output: "Hello, world!"
+
+string truncatedString = "Lorem ipsum dolor sit amet.".FixLength(10); 
+// Output: "Lorem ipsu..."
+
+bool hasValue = "   Hello World   ".HasValue();
+// Output: true
+
+int numericValue = "12345".ToInt();
+// Output: 12345
+
+```
 
 ## Contributing
 
