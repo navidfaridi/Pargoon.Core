@@ -5,11 +5,11 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
-    <FileVersion>1.0.9</FileVersion>
-    <Version>1.0.9</Version>
+    <FileVersion>1.1.0</FileVersion>
+    <Version>1.1.0</Version>
     <Copyright>Navid Faridi</Copyright>
-    <Description>This is a utility package, contain some useful functions for regular expression and working with strings.</Description>
-    <AssemblyVersion>1.0.9</AssemblyVersion>
+    <Description>This is a utility package, contain some useful functions for regular expression, Array, Time, Objects and working with strings.</Description>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
     <PackageReleaseNotes>adding encryption utility</PackageReleaseNotes>
     <Authors>Navid Faridi</Authors>
     <SignAssembly>False</SignAssembly>

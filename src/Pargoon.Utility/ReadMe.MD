@@ -5,6 +5,7 @@ Pargoon Utility class libraries
 This is a utility package, contain some useful functions for regular expression, Time, Arrays and working with strings.
 
 In this package you can see these classes:
+
 	- ArrayUtility
 	- Encryption
 	- ObjectUtility
