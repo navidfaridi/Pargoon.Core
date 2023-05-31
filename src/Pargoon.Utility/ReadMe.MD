@@ -17,6 +17,9 @@ Pargoon.Utility is a utility library that provides various helpful functions for
 
 You can install the Pargoon.Utility library using NuGet package manager. Run the following command in the NuGet Package Manager Console:
 
+```
+Install-Package Pargoon.Utility
+```
 
 ### RegXPattern
 This part contain some useful regular expression patterns.
