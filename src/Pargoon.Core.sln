@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9EF69F80
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Core.Tests", "..\tests\Pargoon.Core.Tests\Pargoon.Core.Tests.csproj", "{804CD82C-F3C2-407D-82CB-C6C236D36784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pargoon.Serilog", "Pargoon.Serilog\Pargoon.Serilog.csproj", "{E3F5F9D0-FB6E-4360-A0F2-D6BA6C0621A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Serilog", "Pargoon.Serilog\Pargoon.Serilog.csproj", "{E3F5F9D0-FB6E-4360-A0F2-D6BA6C0621A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pargoon.Core.Logging", "Pargoon.Core.Logging\Pargoon.Core.Logging.csproj", "{8D3D15AA-0D29-4FA4-A79B-18CAEBF8222D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{E3F5F9D0-FB6E-4360-A0F2-D6BA6C0621A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3F5F9D0-FB6E-4360-A0F2-D6BA6C0621A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3F5F9D0-FB6E-4360-A0F2-D6BA6C0621A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D3D15AA-0D29-4FA4-A79B-18CAEBF8222D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D3D15AA-0D29-4FA4-A79B-18CAEBF8222D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D3D15AA-0D29-4FA4-A79B-18CAEBF8222D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D3D15AA-0D29-4FA4-A79B-18CAEBF8222D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
