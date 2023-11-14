@@ -21,7 +21,7 @@ public class SwaggerConfigOptions : IConfigureOptions<SwaggerGenOptions>
 	{
 	  options.SwaggerDoc(desc.GroupName, new OpenApiInfo
 	  {
-		Title = $"BookMe API {desc.ApiVersion}",
+		Title = $"API {desc.ApiVersion}",
 		Version = desc.ApiVersion.ToString()
 	  });
 	}
