@@ -1,13 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	<TargetFramework>netstandard2.1</TargetFramework>
+	<TargetFramework>net6.0</TargetFramework>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
 	<LangVersion>11</LangVersion>
-	<Version>1.0.0</Version>
-	<Authors>Pargoon.Core.Logging</Authors>
-	<PackageId>Pargoon.Core.Logging</PackageId>
-	<Product>Pargoon.Core.Logging</Product>
+	<Version>1.0.7</Version>
+	<Authors>Pargoon.Core.ApiVersioning</Authors>
+	<PackageId>Pargoon.Core.ApiVersioning</PackageId>
+	<Product>Pargoon.Core.ApiVersioning</Product>
 	<Company>Pargoon Deploy System</Company>
-	<Description>Logging for Serilog and Elastics 8.x with basic authentication</Description>
+	<Description>Enable integration for ApiVersioning in Swagger fot dotnet 6</Description>
   </PropertyGroup>
 
   <ItemGroup>
