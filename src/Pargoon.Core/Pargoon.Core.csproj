@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
+	<FileVersion>1.0.0</FileVersion>
+	<Version>1.0.0</Version>
+	<Copyright>Navid Faridi</Copyright>
+	<Description>Pargoon.Core is a core library that provides various helpful class for web Api and more.</Description>
+	<AssemblyVersion>1.1.1</AssemblyVersion>
+	<PackageReleaseNotes>adding Result and TResult classes</PackageReleaseNotes>
+	<Authors>Navid Faridi</Authors>
+	<SignAssembly>False</SignAssembly>
+	<RepositoryUrl>https://github.com/navidfaridi/Pargoon.Core/tree/main/src/Pargoon.Core</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+
+  </PropertyGroup>
+
+</Project>
