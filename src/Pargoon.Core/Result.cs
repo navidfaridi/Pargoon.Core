@@ -4,7 +4,8 @@ namespace Pargoon.Core
 {
 	public class PocoResult
 	{
-		public HttpStatusCode Code { get; set; }
+		public HttpStatusCode StatusCode { get; set; }
+		public int Code {  get; set; }
 		public string? Description { get; set; }
 
 	}
@@ -15,13 +16,15 @@ namespace Pargoon.Core
 		}
 		public Result(int code)
 		{
-			Code = (HttpStatusCode)code;
+			Code = code;
+			StatusCode = (HttpStatusCode)code;
 			Success = code == 200;
 		}
-		public Result(HttpStatusCode code)
+		public Result(HttpStatusCode statusCode)
 		{
-			Code = code;
-			Success = code == HttpStatusCode.OK;
+			StatusCode= statusCode;
+			Code = (int)statusCode;
+			Success = statusCode == HttpStatusCode.OK;
 		}
 		public Result(int code, string? description) : this(code)
 		{

@@ -6,14 +6,14 @@ namespace Pargoon.Core
 	{
 		public TResult() { }
 		public TResult(int code) : base(code) { }
-		public TResult(HttpStatusCode code) : base(code) { }
+		public TResult(HttpStatusCode statusCode) : base(statusCode) { }
 		public TResult(int code, string? description) : base(code, description) { }
-		public TResult(HttpStatusCode code, string? description) : base(code, description) { }
+		public TResult(HttpStatusCode statusCode, string? description) : base(statusCode, description) { }
 		public TResult(int code, string? description, T? data) : base(code, description)
 		{
 			Data = data;
 		}
-		public TResult(HttpStatusCode code, string? description, T? data) : base(code, description)
+		public TResult(HttpStatusCode statusCode, string? description, T? data) : base(statusCode, description)
 		{
 			Data = data;
 		}
