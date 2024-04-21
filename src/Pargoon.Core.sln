@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.ApiVersioning", "Pa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E613DDC7-B0FA-4BE9-892C-2AF0DD3794B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pargoon.Core", "Pargoon.Core\Pargoon.Core.csproj", "{197FDE23-E147-4680-ABC5-8FF96774F687}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Core", "Pargoon.Core\Pargoon.Core.csproj", "{197FDE23-E147-4680-ABC5-8FF96774F687}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pargoon.Core.JWT", "Pargoon.Core.JWT\Pargoon.Core.JWT.csproj", "{2681D175-337C-4F59-9436-6B979B3269A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{197FDE23-E147-4680-ABC5-8FF96774F687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{197FDE23-E147-4680-ABC5-8FF96774F687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{197FDE23-E147-4680-ABC5-8FF96774F687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2681D175-337C-4F59-9436-6B979B3269A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2681D175-337C-4F59-9436-6B979B3269A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2681D175-337C-4F59-9436-6B979B3269A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2681D175-337C-4F59-9436-6B979B3269A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{8D3D15AA-0D29-4FA4-A79B-18CAEBF8222D} = {E613DDC7-B0FA-4BE9-892C-2AF0DD3794B4}
 		{D2E0A7EA-3084-4809-8EFD-3C0FA7EAC845} = {E613DDC7-B0FA-4BE9-892C-2AF0DD3794B4}
 		{197FDE23-E147-4680-ABC5-8FF96774F687} = {E613DDC7-B0FA-4BE9-892C-2AF0DD3794B4}
+		{2681D175-337C-4F59-9436-6B979B3269A5} = {E613DDC7-B0FA-4BE9-892C-2AF0DD3794B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC1B900D-CD4E-4AC4-9D11-27C767563AD7}
