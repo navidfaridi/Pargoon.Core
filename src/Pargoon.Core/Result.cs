@@ -9,54 +9,54 @@ namespace Pargoon.Core
 		public string? Description { get; set; }
 
 	}
-	public class Result : PocoResult
+	public class TResult : PocoResult
 	{
-		public Result()
+		public TResult()
 		{
 		}
-		public Result(int code)
+		public TResult(int code)
 		{
 			Code = code;
 			StatusCode = (HttpStatusCode)code;
 			Success = code == 200;
 		}
-		public Result(HttpStatusCode statusCode)
+		public TResult(HttpStatusCode statusCode)
 		{
 			StatusCode= statusCode;
 			Code = (int)statusCode;
 			Success = statusCode == HttpStatusCode.OK;
 		}
-		public Result(int code, string? description) : this(code)
+		public TResult(int code, string? description) : this(code)
 		{
 			Description = description;
 		}
-		public Result(HttpStatusCode code, string? description) : this(code)
+		public TResult(HttpStatusCode code, string? description) : this(code)
 		{
 			Description = description;
 		}
-		public Result(Result result) : this(result.Code, result.Description) { }
+		
 		public bool Success { get; set; }
 	}
 
-	public class BadRequestDataResult : Result
+	public class BadRequestDataResult : TResult
 	{
 		public BadRequestDataResult(string message) : base(HttpStatusCode.BadRequest, message) { }
 	}
-	public class UnauthorizedDataResult : Result
+	public class UnauthorizedDataResult : TResult
 	{
 		public UnauthorizedDataResult(string message) : base(HttpStatusCode.Unauthorized, message) { }
 	}
-	public class ForbiddenDataResult : Result
+	public class ForbiddenDataResult : TResult
 	{
 		public ForbiddenDataResult(string message) : base(HttpStatusCode.Forbidden, message) { }
 	}
 
-	public class NotFoundDataResult : Result
+	public class NotFoundDataResult : TResult
 	{
 		public NotFoundDataResult(string message) : base(HttpStatusCode.NotFound, message) { }
 	}
 
-	public class InternalServerErrorResult : Result
+	public class InternalServerErrorResult : TResult
 	{
 		public InternalServerErrorResult(string message) : base(HttpStatusCode.InternalServerError, message) { }
 	}

@@ -2,7 +2,7 @@
 
 namespace Pargoon.Core
 {
-	public class TResult<T> : Result 
+	public class TResult<T> : TResult
 	{
 		public TResult() { }
 		public TResult(int code) : base(code) { }
