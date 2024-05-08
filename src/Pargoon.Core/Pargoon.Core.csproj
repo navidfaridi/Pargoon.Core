@@ -17,7 +17,5 @@
 	<RepositoryType>git</RepositoryType>
 	<LangVersion>latest</LangVersion>
   </PropertyGroup>
-
-
   
 </Project>

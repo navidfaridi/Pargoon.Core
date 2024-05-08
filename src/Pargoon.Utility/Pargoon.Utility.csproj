@@ -16,6 +16,7 @@
     <RepositoryUrl>https://github.com/navidfaridi/Pargoon.Core/tree/main/src/Pargoon.Utility</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>persian utility;date utility;string utlity</PackageTags>
+	<LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

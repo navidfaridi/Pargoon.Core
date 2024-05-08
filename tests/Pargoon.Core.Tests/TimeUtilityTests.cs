@@ -33,7 +33,7 @@ namespace Pargoon.Core.Tests
 
 
         [Theory]
-        [InlineData(1662185398000, 2022, 9, 3,6,9,58)]
+        [InlineData(1662185398000, 2022, 9, 3,5,9,58)]
         [InlineData(1641251398000,2022,01,3,23,9,58)]
         public void ShouldConvertUNixMilisecondToDateTime(long ms,
             int expectedYear, int expectedMonth, int expectedDay,

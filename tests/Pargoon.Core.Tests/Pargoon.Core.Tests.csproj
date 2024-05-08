@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Pargoon.Core\Pargoon.Core.csproj" />
     <ProjectReference Include="..\..\src\Pargoon.Utility\Pargoon.Utility.csproj" />
   </ItemGroup>
 
