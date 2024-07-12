@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Pargoon.Core;
 
@@ -6,7 +7,7 @@ public class TPagination<T>
 {
 	private int _totalCount = 0;
 	[DataMember(Name = "data")]
-	public T? Data { get; set; }
+	public List<T>? Data { get; set; }
 	public int PageSize { get; set; } = 10;
 	public int PageCount { get; set; } = 0;
 	public int TotalCount
