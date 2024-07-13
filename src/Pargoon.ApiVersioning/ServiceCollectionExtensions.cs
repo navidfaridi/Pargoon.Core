@@ -40,9 +40,9 @@ public static class ServiceCollectionExtensions
 		return services;
 	}
 
-	public static void UseSwaggerVersioned(this WebApplication app)
+	public static void UseSwaggerVersioned(this WebApplication app, bool showSwaggerInAllEnv = false)
 	{
-		if (app.Environment.IsDevelopment())
+		if (app.Environment.IsDevelopment() || showSwaggerInAllEnv)
 		{
 			var versionDescProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 			app.UseSwagger();
@@ -52,7 +52,23 @@ public static class ServiceCollectionExtensions
 				{
 					options.SwaggerEndpoint($"/swagger/{desc.GroupName}/swagger.json", $"{app.Environment.ApplicationName} - {desc.GroupName.ToUpper()}");
 				}
+
+				options.RoutePrefix = "swagger";
+				options.DocumentTitle = $"{app.Environment.ApplicationName} API - Swagger UI";
+				options.InjectStylesheet("/swagger-ui/custom.css");
+				options.InjectJavascript("/swagger-ui/custom.js");
+				options.EnableValidator(null);
+				options.DisplayRequestDuration();
+				options.DocExpansion(DocExpansion.None);
+
+				options.OAuthClientId("swagger");
+				options.OAuthClientSecret("secret");
+				options.OAuthRealm("");
+				options.OAuthAppName("Swagger");
+				options.OAuthScopeSeparator(" ");
+				options.OAuthUsePkce();
 			});
 		}
 	}
+
 }
