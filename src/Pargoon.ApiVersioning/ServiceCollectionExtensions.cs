@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
@@ -24,11 +23,13 @@ public static class ServiceCollectionExtensions
         if (configuration.GetSection(ApiInfo.SectionName) != null)
             desc = configuration[$"{ApiInfo.SectionName}:{nameof(ApiInfo.ApiDescription)}"];
 
-        services.AddSwaggerGen(options =>
-    {
-        options.SwaggerDoc("Version1", new OpenApiInfo { Title = version, Version = "Version1", Description = desc });
-        options.DocumentFilter<SwaggerDocumentFilter>();
-    });
+        services.AddSwaggerGen();
+        //        options =>
+        //{
+        //    options.SwaggerDoc("Version1", new OpenApiInfo { Title = version, Version = "Version1", Description = desc });
+        //    options.DocumentFilter<SwaggerDocumentFilter>();
+        //}
+        //);
         services.AddApiVersioning(options =>
         {
             options.DefaultApiVersion = new ApiVersion(1, 0);
