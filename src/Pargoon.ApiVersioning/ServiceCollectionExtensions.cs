@@ -60,7 +60,7 @@ public static class ServiceCollectionExtensions
                 options.InjectJavascript("/swagger-ui/custom.js");
                 options.EnableValidator(null);
                 options.DisplayRequestDuration();
-                options.DocExpansion(DocExpansion.None);
+                options.DocExpansion(DocExpansion.List);
 
                 options.OAuthClientId("swagger");
                 options.OAuthClientSecret("secret");
