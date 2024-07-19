@@ -1,4 +1,5 @@
 ﻿using Asp.Versioning.ApiExplorer;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
@@ -8,22 +9,25 @@ namespace Pargoon.ApiVersioning;
 
 public class SwaggerConfigOptions : IConfigureOptions<SwaggerGenOptions>
 {
-  private readonly IApiVersionDescriptionProvider _apiVersionDescriptionProvider;
+    private readonly IApiVersionDescriptionProvider _apiVersionDescriptionProvider;
+    private readonly IConfiguration _configuration;
+    public SwaggerConfigOptions(IApiVersionDescriptionProvider apiVersionDescriptionProvider, IConfiguration configuration)
+    {
+        _apiVersionDescriptionProvider = apiVersionDescriptionProvider;
+        _configuration = configuration;
+    }
 
-  public SwaggerConfigOptions(IApiVersionDescriptionProvider apiVersionDescriptionProvider)
-  {
-	_apiVersionDescriptionProvider = apiVersionDescriptionProvider;
-  }
-
-  public void Configure(SwaggerGenOptions options)
-  {
-	foreach (var desc in _apiVersionDescriptionProvider.ApiVersionDescriptions)
-	{
-	  options.SwaggerDoc(desc.GroupName, new OpenApiInfo
-	  {
-		Title = $"API {desc.ApiVersion}",
-		Version = desc.ApiVersion.ToString()
-	  });
-	}
-  }
+    public void Configure(SwaggerGenOptions options)
+    {
+        var apiInfo = new ApiInfo();
+        _configuration.GetSection(ApiInfo.SectionName).Bind(apiInfo);
+        foreach (var desc in _apiVersionDescriptionProvider.ApiVersionDescriptions)
+        {
+            options.SwaggerDoc(desc.GroupName, new OpenApiInfo
+            {
+                Title = $"{apiInfo.ApiDescription} - {apiInfo.ApiVersion} : {desc.ApiVersion}",
+                Version = apiInfo.ApiDescription
+            });
+        }
+    }
 }

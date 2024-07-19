@@ -1,7 +1,6 @@
 ﻿using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
@@ -12,24 +11,16 @@ namespace Pargoon.ApiVersioning;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddSwaggerService(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddSwaggerService(this IServiceCollection services, string xmlPath)
     {
+
         services.AddTransient<IConfigureOptions<SwaggerGenOptions>, SwaggerConfigOptions>();
-        var version = "1.0.0.0";
-        if (configuration.GetSection(ApiInfo.SectionName) != null)
-            version = configuration[$"{ApiInfo.SectionName}:{nameof(ApiInfo.ApiVersion)}"];
 
-        var desc = "";
-        if (configuration.GetSection(ApiInfo.SectionName) != null)
-            desc = configuration[$"{ApiInfo.SectionName}:{nameof(ApiInfo.ApiDescription)}"];
+        services.AddSwaggerGen(options =>
+        {
+            options.IncludeXmlComments(xmlPath);
+        });
 
-        services.AddSwaggerGen();
-        //        options =>
-        //{
-        //    options.SwaggerDoc("Version1", new OpenApiInfo { Title = version, Version = "Version1", Description = desc });
-        //    options.DocumentFilter<SwaggerDocumentFilter>();
-        //}
-        //);
         services.AddApiVersioning(options =>
         {
             options.DefaultApiVersion = new ApiVersion(1, 0);

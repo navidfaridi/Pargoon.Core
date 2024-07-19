@@ -14,7 +14,7 @@ public class SampleController : ControllerBase
     /// <summary>
     /// this is a get sample action in api version 1.0
     /// </summary>
-    /// <param name="id"></param>
+    /// <param name="id">this is a string param</param>
     /// <returns></returns>
     [HttpGet]
     public IActionResult TestGetAction(string id)
