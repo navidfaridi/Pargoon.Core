@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
+// for generating xml file, add `<GenerateDocumentationFile>True</GenerateDocumentationFile>` under PropertyGroup in csproj file 
 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 builder.Services.AddSwaggerService(xmlPath);
