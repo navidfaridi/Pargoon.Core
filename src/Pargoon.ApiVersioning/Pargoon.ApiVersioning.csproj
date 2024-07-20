@@ -5,7 +5,7 @@
 	<ImplicitUsings>enable</ImplicitUsings>
 	<Nullable>enable</Nullable>
 	<LangVersion>latest</LangVersion>
-	<Version>8.0.0</Version>
+	<Version>8.0.1</Version>
 	<Authors>Pargoon.Core.ApiVersioning</Authors>
 	<PackageId>Pargoon.Core.ApiVersioning</PackageId>
 	<Product>Pargoon.Core.ApiVersioning</Product>

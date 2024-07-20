@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiVersioningUsingSample</name>
+    </assembly>
+    <members>
+        <member name="T:ApiVersioningUsingSample.Controllers.v1.SampleController">
+            <summary>
+            this is a sample controller in version 1.0
+            </summary>
+        </member>
+        <member name="M:ApiVersioningUsingSample.Controllers.v1.SampleController.TestGetAction(System.String)">
+            <summary>
+            this is a get sample action in api version 1.0
+            </summary>
+            <param name="id">this is a string param</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
