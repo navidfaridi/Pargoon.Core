@@ -11,6 +11,7 @@
 	<Product>Pargoon.Core.ApiVersioning</Product>
 	<Company>Pargoon Deploy System</Company>
 	<Description>upgrade to .net 8</Description>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
   
   <ItemGroup>

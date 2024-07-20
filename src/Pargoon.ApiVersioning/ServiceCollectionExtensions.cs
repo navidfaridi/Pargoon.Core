@@ -11,14 +11,15 @@ namespace Pargoon.ApiVersioning;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddSwaggerService(this IServiceCollection services, string xmlPath)
+    public static IServiceCollection AddSwaggerService(this IServiceCollection services, string xmlPath = "")
     {
 
         services.AddTransient<IConfigureOptions<SwaggerGenOptions>, SwaggerConfigOptions>();
 
         services.AddSwaggerGen(options =>
         {
-            options.IncludeXmlComments(xmlPath);
+            if (!string.IsNullOrEmpty(xmlPath))
+                options.IncludeXmlComments(xmlPath);
         });
 
         services.AddApiVersioning(options =>
