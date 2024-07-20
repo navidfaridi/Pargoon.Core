@@ -5,11 +5,11 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
-    <FileVersion>1.1.2</FileVersion>
-    <Version>1.1.2</Version>
+    <FileVersion>1.1.4</FileVersion>
+    <Version>1.1.4</Version>
     <Copyright>Navid Faridi</Copyright>
     <Description>Pargoon.Utility is a utility library that provides various helpful functions for string manipulation, encryption, and more.</Description>
-    <AssemblyVersion>1.1.2</AssemblyVersion>
+    <AssemblyVersion>1.1.4</AssemblyVersion>
     <PackageReleaseNotes>adding random pasword generation method</PackageReleaseNotes>
     <Authors>Navid Faridi</Authors>
     <SignAssembly>False</SignAssembly>

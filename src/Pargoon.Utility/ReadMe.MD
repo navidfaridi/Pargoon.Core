@@ -1,114 +1,81 @@
 ﻿# Pargoon.Utility
 
-Pargoon.Utility is a utility library that provides various helpful functions for string manipulation, encryption, and more.
+## Overview
 
-## Features
+Pargoon.utility is a collection of utility libraries aimed at simplifying common programming tasks. The utilities cover a wide range of functions including string manipulation, array handling, regular expressions, and random number generation.
 
-- String manipulation utilities
-- Encryption utilities
-- Expiration-based encryption
-- ObjectUtility
-- RandomUtility
-- RegXPattern
-- TimeUtility
+## Pargoon.Utility
 
+The `Pargoon.Utility` package provides various utility functions for working with regular expressions, strings, arrays, and random numbers. It is designed to be simple and effective for everyday programming needs.
 
-## Installation
+### Installation
 
-You can install the Pargoon.Utility library using NuGet package manager. Run the following command in the NuGet Package Manager Console:
+You can install the package via NuGet using the following command:
 
-```
-Install-Package Pargoon.Utility
+```bash
+dotnet add package Pargoon.Utility --version 1.1.2
 ```
 
-### RegXPattern
-This part contain some useful regular expression patterns.
+Or update your project file with:
 
-### StringUtility
-Contain some extension methods for strings
+```xml
+<PackageReference Include="Pargoon.Utility" Version="1.1.2" />
+```
 
-### ArrayUtility
-Contain some useful extension methods for merging arrays to string
+### Classes and Methods
 
-### RandomUtils
-Contain some useful function for generating random number and string
+#### RegXPattern
+This class contains useful regular expression patterns for common validation and matching tasks.
 
+#### StringUtility
+Provides extension methods for string manipulation, such as trimming, padding, and converting cases.
 
+#### ArrayUtility
+Includes extension methods for working with arrays, such as merging arrays into strings.
 
-## Usage
+#### RandomUtils
+Offers functions to generate random numbers and strings, useful for testing and simulations.
 
-### String Manipulation
+#### Encryption (New)
+Provides methods for encrypting and decrypting data to enhance security.
 
+#### ObjectUtility (New)
+Includes helper methods for working with objects, such as deep cloning and property manipulation.
+
+#### TimeUtility (New)
+Contains functions for working with date and time, such as formatting and converting time zones.
+
+### Usage Examples
+
+#### Generating a Random String
 ```csharp
 using Pargoon.Utility;
-string[] names = { "John", "Jane", "Michael" };
-string mergedNames = names.MergeToString(names);
-Console.WriteLine(mergedNames); // Output: John, Jane, Michael
 
+string randomStr = RandomUtils.RandomString(10);
+Console.WriteLine(randomStr);  // Outputs a random string of length 10
 ```
 
-### Encryption
-
+#### Merging Arrays into a String
 ```csharp
-string password = "MyPassword123";
-string encryptedPassword = PasswordHelper.EncryptPasswordMd5(password);
-Console.WriteLine(encryptedPassword); // Output: 5F4DCC3B5AA765D61D8327DEB882CF99
+using Pargoon.Utility;
 
-string message = "Hello, World!";
-string passphrase = "MySecretKey";
-string encryptedMessage = PasswordHelper.EncryptString(message, passphrase);
-string decryptedMessage = PasswordHelper.DecryptString(encryptedMessage, passphrase);
-Console.WriteLine(decryptedMessage); // Output: Hello, World!
+string[] array = { "one", "two", "three" };
+string result = ArrayUtility.MergeToString(array, ", ");
+Console.WriteLine(result);  // Outputs: "one, two, three"
 ```
 
-### Expiration-based Encryption
-
+#### Using Regular Expression Patterns
 ```csharp
-string message = "Confidential data";
-string passphrase = "MySecretKey";
-TimeSpan expiration = TimeSpan.FromHours(1);
+using Pargoon.Utility;
 
-string encryptedWithExpiration = PasswordHelper.EncryptWithExpiration(message, passphrase, expiration);
-string decryptedWithExpiration = PasswordHelper.DecryptWithExpiration(encryptedWithExpiration, passphrase);
-Console.WriteLine(decryptedWithExpiration); // Output: Confidential data (within 1 hour of encryption)
+bool isValidEmail = Regex.IsMatch("example@example.com", RegXPattern.EmailPattern);
+Console.WriteLine(isValidEmail);  // Outputs: True
 ```
 
-### StringUtility Examples
-Here are some examples of using the StringUtility class methods:
+### License
 
-```csharp
-bool containsEnglishLetters = "Hello123".IsEnglishLetter();
+This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
 
-bool isValidUsername = "john_doe123".IsValidUsername();
+---
 
-bool isValidMobileNumber = "09123456789".IsValidMobileNumber();
-
-bool isNumeric = "12345".IsNumeric();
-
-bool isValidEmail = "test@example.com".IsValidEmail();
-// Output: true
-
-string fixedEmail = " test @example. com ".FixEmail();
-// Output: "test@example.com"
-
-string strippedString = "<p>Hello, <b>world!</b></p>".StripTags();
-// Output: "Hello, world!"
-
-string truncatedString = "Lorem ipsum dolor sit amet.".FixLength(10); 
-// Output: "Lorem ipsu..."
-
-bool hasValue = "   Hello World   ".HasValue();
-// Output: true
-
-int numericValue = "12345".ToInt();
-// Output: 12345
-
-```
-
-## Contributing
-
-Contributions to Pargoon.Utility are welcome! If you find any bugs, have feature requests, or want to contribute code improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
+For more information and updates, visit the [Pargoon.Core GitHub repository](https://github.com/navidfaridi/Pargoon.Core) and the [NuGet package page](https://www.nuget.org/packages/Pargoon.Utility)【20†source】【21†source】.
