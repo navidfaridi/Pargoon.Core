@@ -3,29 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Utility", "Pargoon.Utility\Pargoon.Utility.csproj", "{7CED43A1-BC4D-48BC-9D16-B00B33081199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Utility", "src\Pargoon.Utility\Pargoon.Utility.csproj", "{7CED43A1-BC4D-48BC-9D16-B00B33081199}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.PersianNumber", "Pargoon.PersianNumber\Pargoon.PersianNumber.csproj", "{FE6F1CB4-F1D2-49D7-9F40-4AA496819D05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.PersianNumber", "src\Pargoon.PersianNumber\Pargoon.PersianNumber.csproj", "{FE6F1CB4-F1D2-49D7-9F40-4AA496819D05}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.PersianDateUtility", "Pargoon.PersianDateUtility\Pargoon.PersianDateUtility.csproj", "{9C77ED2E-F6E6-450C-A342-432F0C39A338}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.PersianDateUtility", "src\Pargoon.PersianDateUtility\Pargoon.PersianDateUtility.csproj", "{9C77ED2E-F6E6-450C-A342-432F0C39A338}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.TagHelpers", "Pargoon.TagHelpers\Pargoon.TagHelpers.csproj", "{AA880CB9-8D5D-46DE-ADD3-67763648CDB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.TagHelpers", "src\Pargoon.TagHelpers\Pargoon.TagHelpers.csproj", "{AA880CB9-8D5D-46DE-ADD3-67763648CDB2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9EF69F80-BBF1-4EAB-BD1A-CE1258DC8ECE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Core.Tests", "..\tests\Pargoon.Core.Tests\Pargoon.Core.Tests.csproj", "{804CD82C-F3C2-407D-82CB-C6C236D36784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Core.Tests", "tests\Pargoon.Core.Tests\Pargoon.Core.Tests.csproj", "{804CD82C-F3C2-407D-82CB-C6C236D36784}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Serilog", "Pargoon.Serilog\Pargoon.Serilog.csproj", "{E3F5F9D0-FB6E-4360-A0F2-D6BA6C0621A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Serilog", "src\Pargoon.Serilog\Pargoon.Serilog.csproj", "{E3F5F9D0-FB6E-4360-A0F2-D6BA6C0621A7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Core.Logging", "Pargoon.Core.Logging\Pargoon.Core.Logging.csproj", "{8D3D15AA-0D29-4FA4-A79B-18CAEBF8222D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Core.Logging", "src\Pargoon.Core.Logging\Pargoon.Core.Logging.csproj", "{8D3D15AA-0D29-4FA4-A79B-18CAEBF8222D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.ApiVersioning", "Pargoon.ApiVersioning\Pargoon.ApiVersioning.csproj", "{D2E0A7EA-3084-4809-8EFD-3C0FA7EAC845}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.ApiVersioning", "src\Pargoon.ApiVersioning\Pargoon.ApiVersioning.csproj", "{D2E0A7EA-3084-4809-8EFD-3C0FA7EAC845}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E613DDC7-B0FA-4BE9-892C-2AF0DD3794B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Core", "Pargoon.Core\Pargoon.Core.csproj", "{197FDE23-E147-4680-ABC5-8FF96774F687}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Core", "src\Pargoon.Core\Pargoon.Core.csproj", "{197FDE23-E147-4680-ABC5-8FF96774F687}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pargoon.Core.JWT", "Pargoon.Core.JWT\Pargoon.Core.JWT.csproj", "{2681D175-337C-4F59-9436-6B979B3269A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pargoon.Core.JWT", "src\Pargoon.Core.JWT\Pargoon.Core.JWT.csproj", "{2681D175-337C-4F59-9436-6B979B3269A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
