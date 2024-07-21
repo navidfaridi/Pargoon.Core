@@ -7,16 +7,27 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Pargoon.ApiVersioning;
 
+/// <summary>
+/// SwaggerConfigOptions
+/// </summary>
 public class SwaggerConfigOptions : IConfigureOptions<SwaggerGenOptions>
 {
     private readonly IApiVersionDescriptionProvider _apiVersionDescriptionProvider;
     private readonly IConfiguration _configuration;
+    /// <summary>
+    /// SwaggerConfigOptions Constructor
+    /// </summary>
+    /// <param name="apiVersionDescriptionProvider"></param>
+    /// <param name="configuration"></param>
     public SwaggerConfigOptions(IApiVersionDescriptionProvider apiVersionDescriptionProvider, IConfiguration configuration)
     {
         _apiVersionDescriptionProvider = apiVersionDescriptionProvider;
         _configuration = configuration;
     }
-
+    /// <summary>
+    /// Configure SwaggerGenOptions
+    /// </summary>
+    /// <param name="options"></param>
     public void Configure(SwaggerGenOptions options)
     {
         var apiInfo = new ApiInfo();

@@ -4,11 +4,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace Pargoon.ApiVersioning;
-
+/// <summary>
+/// Service Configuration Extensions
+/// </summary>
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddSwaggerService(this IServiceCollection services, string xmlPath = "")
@@ -20,6 +23,29 @@ public static class ServiceCollectionExtensions
         {
             if (!string.IsNullOrEmpty(xmlPath))
                 options.IncludeXmlComments(xmlPath);
+            OpenApiSecurityScheme securityScheme = new OpenApiSecurityScheme
+            {
+                Name = "Authorization",
+                BearerFormat = "JWT",
+                Scheme = "bearer",
+                Description = "Specify the authorization token.",
+                In = ParameterLocation.Header,
+                Type = SecuritySchemeType.Http
+            };
+            options.AddSecurityDefinition("Bearer", securityScheme);
+            OpenApiSecurityRequirement securityRequirement = new OpenApiSecurityRequirement {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                },
+                Array.Empty<string>()
+            } };
+            options.AddSecurityRequirement(securityRequirement);
         });
 
         services.AddApiVersioning(options =>
@@ -33,7 +59,11 @@ public static class ServiceCollectionExtensions
         });
         return services;
     }
-
+    /// <summary>
+    /// Configure swagger middleware
+    /// </summary>
+    /// <param name="app"></param>
+    /// <param name="showSwaggerInAllEnv"></param>
     public static void UseSwaggerVersioned(this WebApplication app, bool showSwaggerInAllEnv = false)
     {
         if (app.Environment.IsDevelopment() || showSwaggerInAllEnv)
