@@ -74,7 +74,7 @@ public class TResult<T> : TResult
 		return new TResult<T>(HttpStatusCode.OK, description, value);
 	}
 
-	public static TResult<T> Fail(int code, string description)
+	public static TResult<T> Fail(int code, string? description)
 	{
 		return new TResult<T>(code, description);
 	}
