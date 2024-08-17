@@ -5,11 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
-	<FileVersion>8.0.1</FileVersion>
-	<Version>8.0.1</Version>
+	<FileVersion>8.0.2</FileVersion>
+	<Version>8.0.2</Version>
 	<Copyright>Navid Faridi</Copyright>
 	<Description>Pargoon.Core.JWT is a core library that provides various helpful tools for adding jwt token to web Api and web app.</Description>
-	<AssemblyVersion>8.0.1</AssemblyVersion>
+	<AssemblyVersion>8.0.2</AssemblyVersion>
 	<PackageReleaseNotes>Adding JwtConfig and JwtSettings</PackageReleaseNotes>
 	<Authors>Navid Faridi</Authors>
 	<SignAssembly>False</SignAssembly>
