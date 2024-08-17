@@ -21,7 +21,8 @@ dotnet add package Pargoon.Core.JWT
         "Issuer": "YourIssuer",
         "EncKey": "YourEncryptionKey",
         "Secret": "YourSecretKey",
-        "ExpirationInMinutes": 60
+        "ExpirationInMinutes": 60,
+        "RefreshTokenExpirationInMinutes":2460
       }
     }
     ```
