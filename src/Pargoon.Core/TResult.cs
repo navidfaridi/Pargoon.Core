@@ -69,14 +69,18 @@ public class InternalServerErrorResult : TResult
 
 public class TResult<T> : TResult
 {
-	public static TResult<T> Success(T value, string description = "")
+	public static TResult<T> Success(T value, HttpStatusCode statusCode = HttpStatusCode.OK, string description = "")
 	{
-		return new TResult<T>(HttpStatusCode.OK, description, value);
+		return new TResult<T>(statusCode, description, value);
 	}
 
 	public static TResult<T> Fail(int code, string? description)
 	{
 		return new TResult<T>(code, description);
+	}
+	public static TResult<T> Fail(HttpStatusCode statucCode, string? description)
+	{
+		return new TResult<T>(statucCode, description);
 	}
 	public TResult() { }
 	public TResult(int code) : base(code) { }
