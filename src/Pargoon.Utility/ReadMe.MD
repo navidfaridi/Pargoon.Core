@@ -13,13 +13,13 @@ The `Pargoon.Utility` package provides various utility functions for working wit
 You can install the package via NuGet using the following command:
 
 ```bash
-dotnet add package Pargoon.Utility --version 1.1.2
+dotnet add package Pargoon.Utility --version 1.1.5
 ```
 
 Or update your project file with:
 
 ```xml
-<PackageReference Include="Pargoon.Utility" Version="1.1.2" />
+<PackageReference Include="Pargoon.Utility" Version="1.1.5" />
 ```
 
 ### Classes and Methods
