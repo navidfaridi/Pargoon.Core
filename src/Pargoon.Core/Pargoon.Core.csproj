@@ -5,17 +5,21 @@
 	<Nullable>enable</Nullable>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
-	<FileVersion>1.1.7</FileVersion>
-	<Version>1.1.7</Version>
+	<FileVersion>1.1.8</FileVersion>
+	<Version>1.1.8</Version>
 	<Copyright>Navid Faridi</Copyright>
 	<Description>Pargoon.Core is a core library that provides various helpful class for web Api and more.</Description>
-	<AssemblyVersion>1.1.7</AssemblyVersion>
-	<PackageReleaseNotes>enabling TResult to accept tupple base generic</PackageReleaseNotes>
+	<AssemblyVersion>1.1.8</AssemblyVersion>
+	<PackageReleaseNotes>Add JsonConvert on top of system.text.json with default serilizing and deserializing camelCase,CaseInsensitive and UnsafeRelaxedJsonEscaping options</PackageReleaseNotes>
 	<Authors>Navid Faridi</Authors>
 	<SignAssembly>False</SignAssembly>
 	<RepositoryUrl>https://github.com/navidfaridi/Pargoon.Core/tree/main/src/Pargoon.Core</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<LangVersion>latest</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  </ItemGroup>
   
 </Project>
