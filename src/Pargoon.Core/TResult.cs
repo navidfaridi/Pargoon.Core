@@ -24,13 +24,11 @@ public class TResult : PocoResult
 	{
 		Code = code;
 		StatusCode = (HttpStatusCode)code;
-		IsSuccess = code == 200;
 	}
 	public TResult(HttpStatusCode statusCode)
 	{
 		StatusCode = statusCode;
 		Code = (int)statusCode;
-		IsSuccess = statusCode == HttpStatusCode.OK;
 	}
 	public TResult(int code, string? description) : this(code)
 	{
@@ -41,7 +39,7 @@ public class TResult : PocoResult
 		Description = description;
 	}
 
-	public bool IsSuccess { get; }
+	public bool IsSuccess { get { return Code == 200 || StatusCode == HttpStatusCode.OK; } }
 }
 
 public class BadRequestDataResult : TResult
