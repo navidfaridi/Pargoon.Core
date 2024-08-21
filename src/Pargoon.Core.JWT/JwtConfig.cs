@@ -62,15 +62,10 @@ public static class JwtConfig
 				opt.TokenValidationParameters = tvp;
 			});
 	}
-	public static string CreateToken(string username, Guid userUniqueId, List<string> roles, JwtSettings settings)
+	public static string CreateToken(string username, Guid userUniqueId, List<Claim> claims, JwtSettings settings)
 	{
-		List<Claim> claims = new() {
-					new Claim(ClaimTypes.Name, username),
-					new Claim(ClaimTypes.NameIdentifier, userUniqueId.ToString()),
-		};
-		foreach (var item in roles)
-			claims.Add(new Claim(ClaimTypes.Role, item));
-
+		claims.Add(new Claim(ClaimTypes.Name, username));
+		claims.Add(new Claim(ClaimTypes.NameIdentifier, userUniqueId.ToString()));
 		var isk = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(settings.Secret));
 		var tdk = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(settings.EncKey));
 
@@ -95,9 +90,52 @@ public static class JwtConfig
 
 		return jwt;
 	}
+	public static string CreateToken(string username, Guid userUniqueId, List<string> roles, JwtSettings settings)
+	{
+		List<Claim> claims = new() {
+					new Claim(ClaimTypes.Name, username),
+					new Claim(ClaimTypes.NameIdentifier, userUniqueId.ToString()),
+		};
+		foreach (var item in roles)
+			claims.Add(new Claim(ClaimTypes.Role, item));
+
+		return CreateToken(username, userUniqueId, claims, settings);
+	}
 	public static string CreateToken(string username, Guid userUniqueId, List<string> roles, IConfiguration configuration)
 	{
 		var config = GetJwtSettings(configuration);
 		return CreateToken(username, userUniqueId, roles, config);
+	}
+
+	public static string GetUsername(ClaimsPrincipal user)
+	{
+		if (user != null)
+		{
+			var nameClaim = user.FindFirst(ClaimTypes.Name);
+			if (nameClaim != null)
+				return nameClaim.Value;
+		}
+		return string.Empty;
+	}
+	public static string GetUserId(ClaimsPrincipal user)
+	{
+		if (user != null)
+		{
+			var nameClaim = user.FindFirst(ClaimTypes.NameIdentifier);
+			if (nameClaim != null)
+				return nameClaim.Value;
+		}
+		return string.Empty;
+	}
+	public static List<string> GetRoles(ClaimsPrincipal user)
+	{
+		var roles = new List<string>();
+		if (user == null)
+			return roles;
+
+		foreach (var item in user.Claims.Where(u => u.Type == ClaimTypes.Role))
+			roles.Add(item.Value);
+
+		return roles;
 	}
 }
