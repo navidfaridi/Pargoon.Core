@@ -2,17 +2,17 @@
 
 ## Overview
 
-`Pargoon.Extensions.Linq` is a C# library that provides a set of extension methods for enhancing `IQueryable<T>` and `IEnumerable<T>` operations. These extensions focus on conditional filtering (`WhereIf`) and dynamic sorting (`Sorting`), allowing developers to build more flexible and maintainable LINQ queries.
+`Pargoon.Extensions.Linq` is a C# library that enhances LINQ operations by providing a set of extension methods. These methods allow for conditional filtering and dynamic sorting of `IQueryable<T>` collections, making it easier to build flexible and maintainable queries.
 
 ## Features
 
-- **Conditional Filtering**: Easily apply filters to queries based on runtime conditions.
-- **Dynamic Sorting**: Sort collections dynamically based on property names and sort directions, with support for multiple sorting criteria.
-- **Supports Both `IQueryable<T>` and `IEnumerable<T>`**: Although the library is optimized for `IQueryable<T>`, it also provides fallback support for `IEnumerable<T>` by converting to `IQueryable<T>`.
+- **Conditional Filtering**: Use `WhereIf` to apply filters only when a specified condition is true.
+- **Dynamic Sorting**: Sort collections based on property names and directions specified at runtime, with support for sorting on multiple properties.
+- **Supports Custom Comparers**: Sorting methods support custom comparers for advanced sorting scenarios.
 
 ## Installation
 
-To use the `Pargoon.Extensions.Linq` library, simply include the source file in your project or compile the code into a DLL and reference it in your project.
+To use the `Pargoon.Extensions.Linq` library, add the source file to your project or compile it into a DLL and reference it in your project.
 
 ## Usage
 
@@ -32,7 +32,7 @@ var filteredData = data.WhereIf(isActive, x => x.IsActive);
 
 ### 2. Dynamic Sorting (`Sorting`)
 
-The `Sorting` extension methods provide a way to sort collections based on property names and sort directions at runtime.
+The `Sorting` extension methods enable sorting collections based on property names and sort directions at runtime.
 
 #### Single Property Sorting
 
@@ -43,9 +43,11 @@ var sortedData = data.Sorting("PropertyName", SortDirection.Asc);
 ```
 
 - `PropertyName`: The name of the property to sort by.
-- `SortDirection.Asc`: Sort direction (ascending or descending).
+- `SortDirection.Asc`: The direction to sort in (ascending or descending).
 
 #### Multiple Property Sorting
+
+You can sort by multiple properties by providing a list of `SortItem` objects.
 
 ```csharp
 using Pargoon.Extensions.Linq;
@@ -75,7 +77,7 @@ var sortedData = data.Sorting("PropertyName", SortDirection.Asc, comparer: new C
 
 ## Example
 
-Here's a complete example of using `Pargoon.Extensions.Linq` in a typical scenario:
+Here's a complete example using `Pargoon.Extensions.Linq` in a typical scenario:
 
 ```csharp
 using Pargoon.Extensions.Linq;
@@ -97,7 +99,7 @@ var result = query.ToList();
 In this example:
 
 - Users are filtered by `IsActive` only if `isActive` is `true`.
-- The filtered results are then sorted by `FirstName` in ascending order and `LastName` in descending order.
+- The filtered results are sorted by `FirstName` in ascending order and `LastName` in descending order.
 
 ## Contributing
 
@@ -109,4 +111,4 @@ This library is licensed under the MIT License. See the LICENSE file for more de
 
 ---
 
-With `Pargoon.Extensions.Linq`, you can build more dynamic and flexible LINQ queries, improving both the readability and maintainability of your code.
+With `Pargoon.Extensions.Linq`, you can build dynamic and flexible LINQ queries that improve the readability and maintainability of your code.

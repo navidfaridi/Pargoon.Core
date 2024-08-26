@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace Pargoon.Extensions.Linq;
 
-public class TPagination<T>
+public class TPaginationResult<T>
 {
     [DataMember(Name = "data")]
     [JsonPropertyName("data")]
@@ -24,5 +24,14 @@ public class TPagination<T>
 
     [JsonPropertyName("totalRecords")]
     public int TotalRecords { get; set; }
+}
+
+public class TListRequest<T>
+{
+    [JsonPropertyName("pageSize")]
+    public int PageSize { get; set; } = 10;
+    [JsonPropertyName("pageIndex")]
+    public int PageIndex { get; set; } = 0;
+    [JsonPropertyName("sortItems")]
     public List<SortItem> SortItems { get; set; } = new List<SortItem>();
 }
