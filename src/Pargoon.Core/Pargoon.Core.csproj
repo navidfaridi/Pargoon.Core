@@ -5,11 +5,11 @@
 	<Nullable>enable</Nullable>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
-	<FileVersion>1.1.9</FileVersion>
-	<Version>1.1.9</Version>
+	<FileVersion>1.2.0</FileVersion>
+	<Version>1.2.0</Version>
 	<Copyright>Navid Faridi</Copyright>
 	<Description>Pargoon.Core is a core library that provides various helpful class for web Api and more.</Description>
-	<AssemblyVersion>1.1.9</AssemblyVersion>
+	<AssemblyVersion>1.2.0</AssemblyVersion>
 	<PackageReleaseNotes>Add JsonConvert on top of system.text.json with default serilizing and deserializing camelCase,CaseInsensitive and UnsafeRelaxedJsonEscaping options</PackageReleaseNotes>
 	<Authors>Navid Faridi</Authors>
 	<SignAssembly>False</SignAssembly>

@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiVersioningUsingSample", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Core.JWT", "src\Pargoon.Core.JWT\Pargoon.Core.JWT.csproj", "{51A96663-2912-44AC-8683-63D3DF61A0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pargoon.Exceptions", "src\Pargoon.Exceptions\Pargoon.Exceptions.csproj", "{B6842F45-5054-4165-B9CA-64989960A52F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pargoon.Exceptions", "src\Pargoon.Exceptions\Pargoon.Exceptions.csproj", "{B6842F45-5054-4165-B9CA-64989960A52F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pargoon.Extensions.Linq", "src\Pargoon.Extensions.Linq\Pargoon.Extensions.Linq.csproj", "{DA6E930B-3FD4-4421-8A7D-0CFED5050110}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{B6842F45-5054-4165-B9CA-64989960A52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6842F45-5054-4165-B9CA-64989960A52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6842F45-5054-4165-B9CA-64989960A52F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA6E930B-3FD4-4421-8A7D-0CFED5050110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA6E930B-3FD4-4421-8A7D-0CFED5050110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA6E930B-3FD4-4421-8A7D-0CFED5050110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA6E930B-3FD4-4421-8A7D-0CFED5050110}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +110,7 @@ Global
 		{55B7498D-FFA9-4095-9D7C-004C7D29FE87} = {2A23E718-885E-4CDE-B9F2-9942A378E881}
 		{51A96663-2912-44AC-8683-63D3DF61A0F4} = {E613DDC7-B0FA-4BE9-892C-2AF0DD3794B4}
 		{B6842F45-5054-4165-B9CA-64989960A52F} = {E613DDC7-B0FA-4BE9-892C-2AF0DD3794B4}
+		{DA6E930B-3FD4-4421-8A7D-0CFED5050110} = {E613DDC7-B0FA-4BE9-892C-2AF0DD3794B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC1B900D-CD4E-4AC4-9D11-27C767563AD7}
