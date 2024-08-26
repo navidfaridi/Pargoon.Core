@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace Pargoon.Extensions.Linq;
+namespace Pargoon.Core;
 
-public class TPaginationResult<T>
+public class TPagedResult<T>
 {
-    [JsonPropertyName("data")]
-    public List<T> Data { get; set; } = new List<T>();
+    [JsonPropertyName("items")]
+    public List<T> Items { get; set; } = new List<T>();
 
     [JsonPropertyName("pageSize")]
     public int PageSize { get; set; } = 10;

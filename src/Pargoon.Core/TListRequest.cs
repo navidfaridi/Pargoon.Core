@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace Pargoon.Extensions.Linq;
-
+namespace Pargoon.Core;
 
 public class TListRequest
 {

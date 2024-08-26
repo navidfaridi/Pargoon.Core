@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Pargoon.Extensions.Linq;
+namespace Pargoon.Core;
+
 public enum SortDirection : byte
 {
     Asc = 1,
