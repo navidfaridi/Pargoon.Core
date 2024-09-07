@@ -6,7 +6,12 @@
 		<LangVersion>latest</LangVersion>
 		<PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
 		<Copyright>Navid Faridi</Copyright>
+		<Version>1.0.1</Version>
 		<Description>Pargoon.Exceptions is a .NET Standard library that provides custom exception handling classes for managing errors in a consistent and structured way. This library includes classes such as AppError for defining error details and AppException for handling exceptions with additional context like HTTP status codes and custom error codes.</Description>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Pargoon.Core\Pargoon.Core.csproj" />
+	</ItemGroup>
 
 </Project>
