@@ -1,4 +1,6 @@
-﻿using Asp.Versioning.ApiExplorer;
+﻿#pragma warning disable 414, CS3021, CS1591
+
+using Asp.Versioning.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -36,7 +38,7 @@ public class SwaggerConfigOptions : IConfigureOptions<SwaggerGenOptions>
         {
             options.SwaggerDoc(desc.GroupName, new OpenApiInfo
             {
-                Title = $"{apiInfo.ApiName} - {apiInfo.ApiVersion} : {desc.ApiVersion}",
+                Title = $"{apiInfo.ApiName} - {apiInfo.ApiVersion}:{apiInfo.BuildVersion} : {desc.ApiVersion}",
                 Version = apiInfo.ApiBadge
             });
         }

@@ -27,6 +27,7 @@ public class ApiInfo
 {
     public const string SectionName = "ApiInfo";
     public string ApiVersion { get; set; } = string.Empty;
+    public string BuildVersion { get; set; } = string.Empty;
     public string ApiName { get; set; } = string.Empty;
     public string ApiBadge { get; set; } = string.Empty;
 }
@@ -38,7 +39,8 @@ this class properties will fill from appsettings.json like below:
 ...
 
     "ApiInfo": {
-        "ApiVersion": "1.0.3.0",
+        "ApiVersion": "1.1.0",
+        "BuildNumber": "1125",
         "ApiName": "my sample Api",
         "ApiBadge": "Api Badge"
     },
