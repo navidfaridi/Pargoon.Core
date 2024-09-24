@@ -38,7 +38,7 @@ public class SwaggerConfigOptions : IConfigureOptions<SwaggerGenOptions>
         {
             options.SwaggerDoc(desc.GroupName, new OpenApiInfo
             {
-                Title = $"{apiInfo.ApiName} - {apiInfo.ApiVersion}:{apiInfo.BuildVersion} : {desc.ApiVersion}",
+                Title = $"{apiInfo.ApiName} - {apiInfo.ApiVersion}:{apiInfo.BuildNumber} : {desc.ApiVersion}",
                 Version = apiInfo.ApiBadge
             });
         }

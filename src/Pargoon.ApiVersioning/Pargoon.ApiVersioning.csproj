@@ -6,7 +6,7 @@
 		<PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
-		<Version>8.0.4</Version>
+		<Version>8.0.5</Version>
 		<Authors>Pargoon.Core.ApiVersioning</Authors>
 		<PackageId>Pargoon.Core.ApiVersioning</PackageId>
 		<Product>Pargoon.Core.ApiVersioning</Product>
