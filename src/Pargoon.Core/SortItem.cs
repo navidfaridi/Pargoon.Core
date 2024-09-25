@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace Pargoon.Core;
+﻿namespace Pargoon.Core;
 
 public enum SortDirection : byte
 {
@@ -9,8 +7,6 @@ public enum SortDirection : byte
 }
 public class SortItem
 {
-    [JsonPropertyName("propertyName")]
-    public string PropertyName { get; set; } = null!;
-    [JsonPropertyName("direction")]
-    public SortDirection Direction { get; set; } = SortDirection.Asc;
+    public string SortPropertyName { get; set; } = string.Empty;
+    public SortDirection SortDirection { get; set; } = SortDirection.Asc;
 }

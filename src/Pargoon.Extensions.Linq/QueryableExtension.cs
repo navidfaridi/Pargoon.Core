@@ -23,19 +23,10 @@ public static class QueryableExtension
             : query.OrderByDescending(propertyName!, comparer);
     }
 
-    public static IQueryable<T> Sorting<T>(this IQueryable<T> query, List<SortItem> sortItems, IComparer<object>? comparer = null)
+    public static IQueryable<T> Sorting<T>(this IQueryable<T> query, SortItem? sortItems, string? defaultPropertyName = null, IComparer<object>? comparer = null)
     {
-        if (sortItems == null || sortItems.Count == 0)
-            return query;
+        var result = query.Sorting(sortItems?.SortPropertyName, sortItems?.SortDirection ?? SortDirection.Desc, defaultPropertyName, comparer);
 
-        var result = query.Sorting(sortItems.First().PropertyName, sortItems.First().Direction, comparer: comparer);
-        for (var i = 1; i < sortItems.Count; i++)
-        {
-            var item = sortItems[i];
-            result = item.Direction == SortDirection.Asc
-                ? result.ThenBy(item.PropertyName, comparer)
-                : result.ThenByDescending(item.PropertyName, comparer);
-        }
         return result;
     }
 
