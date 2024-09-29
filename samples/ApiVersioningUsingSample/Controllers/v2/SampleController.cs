@@ -1,4 +1,5 @@
-﻿using Asp.Versioning;
+﻿#pragma warning disable 414, CS3021, CS1591
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiVersioningUsingSample.Controllers.v2;

@@ -6,7 +6,7 @@
 		<PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
-		<Version>8.0.5</Version>
+		<Version>8.0.6</Version>
 		<Authors>Pargoon.Core.ApiVersioning</Authors>
 		<PackageId>Pargoon.Core.ApiVersioning</PackageId>
 		<Product>Pargoon.Core.ApiVersioning</Product>
@@ -14,10 +14,6 @@
 		<Description>upgrade to .net 8</Description>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
-
-	<ItemGroup>
-		<Compile Remove="SwaggerDocumentFilter.cs" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />

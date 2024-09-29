@@ -2,6 +2,7 @@
 using Asp.Versioning;
 using Asp.Versioning.ApiExplorer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
@@ -15,9 +16,9 @@ namespace Pargoon.ApiVersioning;
 /// </summary>
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddSwaggerService(this IServiceCollection services, string xmlPath = "")
+    public static IServiceCollection AddSwaggerService(this IServiceCollection services, IConfiguration configuration, string xmlPath = "")
     {
-
+        services.Configure<ApiInfo>(configuration.GetSection(ApiInfo.SectionName));
         services.AddTransient<IConfigureOptions<SwaggerGenOptions>, SwaggerConfigOptions>();
 
         services.AddSwaggerGen(options =>
@@ -79,7 +80,7 @@ public static class ServiceCollectionExtensions
                 }
 
                 options.RoutePrefix = "swagger";
-                options.DocumentTitle = $"{app.Environment.ApplicationName} API - Swagger UI";
+                options.DocumentTitle = $"{app.Environment.ApplicationName} - Swagger UI";
                 options.InjectStylesheet("/swagger-ui/custom.css");
                 options.InjectJavascript("/swagger-ui/custom.js");
                 options.EnableValidator(null);
