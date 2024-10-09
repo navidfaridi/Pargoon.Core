@@ -7,9 +7,7 @@
     <Description>Contain some useful function for working with persian date</Description>
     <Copyright>Navid Faridi</Copyright>
     <Authors>Navid Faridi</Authors>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <Version>1.0.2</Version>       
     <PackageProjectUrl>https://www.nuget.org/packages/Pargoon.PersianDateUtility/</PackageProjectUrl>
   </PropertyGroup>
 
@@ -19,7 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Pargoon.PersianNumber" Version="1.0.1" />
-    <PackageReference Include="Pargoon.Utility" Version="1.0.3" />
+    <PackageReference Include="Pargoon.Utility" Version="1.1.5" />
   </ItemGroup>
 
 </Project>
