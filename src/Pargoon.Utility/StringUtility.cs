@@ -131,7 +131,15 @@ public static class StringUtility
 
 	public static string ToCurrency(this decimal value)
 	{
-		return value.ToString("C0");
+		var culture = "en-US";
+		var cultureInfo = new System.Globalization.CultureInfo(culture);
+		return value.ToString("C0", cultureInfo);
+	}
+
+	public static string ToCurrency(this decimal value, string culture = "en-US", string format = "C0")
+	{
+		var cultureInfo = new System.Globalization.CultureInfo(culture);
+		return value.ToString(format, cultureInfo);
 	}
 
 	public static string ToEnglishNumber(this string txt)
