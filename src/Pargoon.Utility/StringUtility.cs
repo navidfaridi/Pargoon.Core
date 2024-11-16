@@ -126,7 +126,9 @@ public static class StringUtility
 	/// <returns>The value as a currency string.</returns>
 	public static string ToCurrency(this int value)
 	{
-		return value.ToString("C0");
+		var culture = "en-US";
+		var cultureInfo = new System.Globalization.CultureInfo(culture);
+		return value.ToString("C0", cultureInfo);
 	}
 
 	public static string ToCurrency(this decimal value)
