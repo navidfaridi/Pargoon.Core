@@ -5,7 +5,7 @@
 	<Nullable>enable</Nullable>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>	
-	<Version>1.2.5</Version>
+	<Version>9.0.0</Version>
 	<Copyright>Navid Faridi</Copyright>
 	<Description>Pargoon.Core is a core library that provides various helpful class for web Api and more.</Description>	
 	<PackageReleaseNotes>Add TListRequest, SortItem and TPagedResult models</PackageReleaseNotes>
@@ -17,7 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
   </ItemGroup>
   
 </Project>
