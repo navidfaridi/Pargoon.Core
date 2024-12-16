@@ -16,6 +16,13 @@ namespace Pargoon.ApiVersioning;
 /// </summary>
 public static class ServiceCollectionExtensions
 {
+    /// <summary>
+    /// Add Swagger Service
+    /// </summary>
+    /// <param name="services"></param>
+    /// <param name="configuration"></param>
+    /// <param name="xmlPath">add xml file description to the swagger</param>
+    /// <returns></returns>
     public static IServiceCollection AddSwaggerService(this IServiceCollection services, IConfiguration configuration, string xmlPath = "")
     {
         services.Configure<ApiInfo>(configuration.GetSection(ApiInfo.SectionName));
@@ -48,6 +55,7 @@ public static class ServiceCollectionExtensions
                 Array.Empty<string>()
             } };
             options.AddSecurityRequirement(securityRequirement);
+            options.EnableAnnotations();
         });
 
         services.AddApiVersioning(options =>
