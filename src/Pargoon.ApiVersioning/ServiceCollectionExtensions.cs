@@ -32,7 +32,7 @@ public static class ServiceCollectionExtensions
         {
             if (!string.IsNullOrEmpty(xmlPath))
                 options.IncludeXmlComments(xmlPath);
-            OpenApiSecurityScheme securityScheme = new OpenApiSecurityScheme
+            var securityScheme = new OpenApiSecurityScheme
             {
                 Name = "Authorization",
                 BearerFormat = "JWT",
@@ -42,7 +42,7 @@ public static class ServiceCollectionExtensions
                 Type = SecuritySchemeType.Http
             };
             options.AddSecurityDefinition("Bearer", securityScheme);
-            OpenApiSecurityRequirement securityRequirement = new OpenApiSecurityRequirement {
+            var securityRequirement = new OpenApiSecurityRequirement {
             {
                 new OpenApiSecurityScheme
                 {
