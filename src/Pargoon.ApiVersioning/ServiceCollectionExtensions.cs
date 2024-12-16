@@ -48,6 +48,7 @@ public static class ServiceCollectionExtensions
                 Array.Empty<string>()
             } };
             options.AddSecurityRequirement(securityRequirement);
+            options.EnableAnnotations();
         });
 
         services.AddApiVersioning(options =>

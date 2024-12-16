@@ -6,7 +6,7 @@
 		<PackageProjectUrl>https://github.com/navidfaridi/Pargoon.Core/</PackageProjectUrl>
 		<Nullable>enable</Nullable>
 		<LangVersion>latest</LangVersion>
-		<Version>8.0.7</Version>
+		<Version>8.0.8</Version>
 		<Authors>Pargoon.Core.ApiVersioning</Authors>
 		<PackageId>Pargoon.Core.ApiVersioning</PackageId>
 		<Product>Pargoon.Core.ApiVersioning</Product>
@@ -18,8 +18,9 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
 		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
-		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.8.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="7.2.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.2.0" />
 		<PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.8.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
 	</ItemGroup>
 </Project>
